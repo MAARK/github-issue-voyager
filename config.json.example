@@ -1,0 +1,26 @@
+{
+  "sourceRepository": {
+    "repoOwner": "MyFirstOwner",
+    "repoName": "MyFirstRepoName",
+    "accessToken": "11111111111111111111111111111111111"
+  },
+  "destinationRepository": {
+    "repoOwner": "MySecondOwner",
+    "repoName": "MySecondRepoName",
+    "accessToken": "11111111111111111111111111111111111"
+  }, 
+  "options" : {
+    "method" : "all", 
+    "labels" : ["frontend"], 
+    "issueNumbers" : [27, 28], 
+    "stickyUsers" : false, 
+    "closeIssueWhenComplete" : false
+  }, 
+  "userMappings" : [
+    {"source": "first-username", "destination" : "second-username"} 
+  ]
+}
+
+
+
+
