@@ -6,10 +6,10 @@ Based on <https://github.com/buildo/gh-issue-mover>.
 
 ## Usage
 
-Install from npm:
+Install from npm (TODO - when completed):
 
 ```bash
-npm install -g github-issue-mover
+npm install -g github-issue-mover 
 ```
 
 Create a configuration file that contains all of the details of the migration: 
