@@ -45,7 +45,7 @@ module.exports = {
         }
 
         if (!fileExists(cf)) {
-            console.log('Unable to locate the specified configuration file');
+            console.log('Unable to locate the specified configuration file.');
             process.exit(1);
         }
 

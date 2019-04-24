@@ -1,15 +1,15 @@
-# GitHub Issue Migrator 
+# GitHub Issue Voyager 
 
-Configuration-based CLI tool to migrate issues across GitHub repositories. 
+Configuration-based CLI tool to migrate issues across GitHub repositories.  
 
-Based on <https://github.com/buildo/gh-issue-mover>. 
+Based largely on <https://github.com/buildo/gh-issue-mover>. `gh-issue-mover` is more command-line based, whereas I wrote GitHub Issue Voyager as a utility that could be fully pre-configured from a config file. Also, I needed to be able to map usernames across repos.    
 
 ## Usage
 
 Install from npm (TODO - when completed):
 
 ```bash
-npm install -g github-issue-mover 
+npm install -g github-issue-voyager 
 ```
 
 Create a configuration file that contains all of the details of the migration: 
@@ -38,14 +38,6 @@ Create a configuration file that contains all of the details of the migration:
   ]
 }
 ```
-
-`sourceRepository` contains details of the originating repo: 
-
-`repoOwner` - owner of the repo (organization or user) 
-
-`repoName` - name of the repo
-
-`accessToken` - 
 
 | Name                     | Description                                                  | Req. |
 | ------------------------ | ------------------------------------------------------------ | ---- |

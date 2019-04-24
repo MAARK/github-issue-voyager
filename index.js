@@ -1,21 +1,21 @@
 require('colors'); 
 const getConfigJson = require('./configFile').getConfigJson; 
-const GithubIssueMigrator = require('./githubIssueMigrator'); 
+const IssueVoyager = require('./issueVoyager'); 
 
 module.exports = () => {
 
     const configJson = getConfigJson(); 
 
     async function main() {
-        const migrator = new GithubIssueMigrator(configJson); 
-        const result = await migrator.execute();     
+        const voyager = new IssueVoyager(configJson); 
+        const result = await voyager.execute();     
     }
 
     // https://stackoverflow.com/questions/46515764/how-can-i-use-async-await-at-the-top-level
     (async () => {
         try {
             await main();
-            console.log("🤝 Migration completed");
+            console.log("🛳 Your GitHub Issue Voyage has been completed.");
         } catch (e) {
             console.error(e);
         }
