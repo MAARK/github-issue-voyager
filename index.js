@@ -1,14 +1,16 @@
-require('colors'); 
-const getConfigJson = require('./configFile').getConfigJson; 
-const IssueVoyager = require('./issueVoyager'); 
+/*jshint esversion: 6 */
+
+require('colors');
+const getConfigJson = require('./configFile').getConfigJson;
+const IssueJiraVoyager = require('./issueJiraVoyager');
 
 module.exports = () => {
 
-    const configJson = getConfigJson(); 
+    const configJson = getConfigJson();
 
     async function main() {
-        const voyager = new IssueVoyager(configJson); 
-        const result = await voyager.execute();     
+        const voyager = new IssueJiraVoyager(configJson);
+        const result = await voyager.execute();
     }
 
     // https://stackoverflow.com/questions/46515764/how-can-i-use-async-await-at-the-top-level

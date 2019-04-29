@@ -1,0 +1,218 @@
+Summary,Assignee,Reporter,Issue Type,Description,Comment,Comment,Comment
+Mobile: Build out full chart support,madeleinewitt,mvanderhyde,Development,"Creating task based on chat with @carrale-jhancock – need to ensure we have mobile form factor accounted for for all charts.","Chatted with Alex—I'll make mobile versions of the following charts, which aren't accounted for in the full JHI site:
+- Performance correlation
+- The stylebox responsive interaction","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/60",""
+Reports: Bring back heat map,acarr,mvanderhyde,Development,"Creating based on chat with @carrale-jhancock – these dropped off in the last round.","Print reports updated to include the heat map are now [on Dropbox](https://www.dropbox.com/s/pm0zgt0fgkl0jo5/JHI_Portfolio-Insight_Visual-Design_1.6_Print.pdf?dl=0).
+
+Let me know if I can do anything else!","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/61",""
+Reports: Comparison states needed,madeleinewitt,mvanderhyde,Development,"Creating based on chat with @carrale-jhancock 
+
+> Any adjustments or notes that need to be made to the reports for multiple report comparison","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/62","",""
+Nav: Need to define how PI exists in website,acarr,mvanderhyde,Development,"Need to document where Portfolio Insight exists on the website both in terms of home and ads as well as how people can access it","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/63","",""
+API POST /api/v1/portfolio/:id/share,bodek,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/64","",""
+API GET /api/v1/token,bodek,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/65","",""
+Shared portfolio emails,bodek,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/66","",""
+Shared portfolio email opt in,bodek,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/67","",""
+User flow updates,bodek,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/68","",""
+PDF Report Generation - integrate BE service,xtrimsky,richwagner,Development,"","Web service is created as part of Fact Sheets project. ","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/69",""
+Add to Folder Modal,cryptogramllc,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/70","",""
+Header (BE) ,MirasHopsiup,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/71","",""
+Insight Nav (BE),MirasHopsiup,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/72","",""
+Page Heading (BE),bodek,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/73","",""
+Disclosures (BE),bodek,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/74","",""
+Portfolio Detail: Detail info & controls,cryptogramllc,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/75","",""
+Portfolio Detail: Breakdown (pie chart and table),cryptogramllc,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/76","",""
+Portfolio Detail: Detail Tabs,cryptogramllc,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/77","",""
+Portfolio Detail Tab > Key Facts,Lexitrons,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/78","",""
+Portfolio Detail Tab > Investments,Lexitrons,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/79","",""
+Portfolio Detail Tab > Peformance,Lexitrons,richwagner,Development,"Includes: 
+
+- [ ] Totals table 
+- [ ] Returns Graph
+- [ ] Risk Chart ","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/80","",""
+Portfolio Detail Tab > Charecteristics,Lexitrons,richwagner,Development,"Includes Composition Chart","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/81","",""
+Portfolio Detail Tab > Fees & Expenses,Lexitrons,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/82","",""
+Portfolio Detail Tab > Reports,cryptogramllc,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/83","",""
+Portfolio Detail Tab > Share Report/Portfolio (FE),cryptogramllc,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/84","",""
+Portfolio Detail Tab > Share Report/Portfolio (BE),bodek,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/85","",""
+Portfolio Comparison > Compare table,cryptogramllc,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/86","",""
+Portfolio Comparison >  Compare Selection graphs,cryptogramllc,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/87","",""
+Portfolio Comparison > Tab Sections,cryptogramllc,richwagner,Development,"Reuse from Detail tabs","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/88","",""
+New Portfolio > Create New,Lexitrons,richwagner,Development,"Build out the Create Portfolio modal portion of the New Portfolio creation process. 
+
+
+Designs: 
+* zpl://screen?sid=5b4e15d9729e51c208b4434c&pid=5b439da2de2a62566567ddbb
+* zpl://screen?sid=5b4e15d9ac54353037dbef01&pid=5b439da2de2a62566567ddbb
+
+Note: Use Apiary in short-term for API interaction (until backend supports actual calls). See Alex R (@rodrale-jhancock ) for details on how to work with it. 
+","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/89","",""
+New Portfolio > Asset Allocation,Lexitrons,richwagner,Development,"- [ ] Add New Fund
+- [ ] Pie chart 
+- [ ] Asset Allocation","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/90","",""
+New Portfolio > Investments Table,Lexitrons,richwagner,Development,"Leverage the component that @khanjib-jhancock is building in Portfolio Detail.  ","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/91","",""
+New Portfolio > Similar Investments Modal,cryptogramllc,richwagner,Development,"Build out Similar Investments modal. 
+
+Design: 
+* zpl://screen?sid=5b9ab06925d0b66614fce336&pid=5b439da2de2a62566567ddbb
+
+API: 
+* Custom Mstar API for this. Rich to provide details.  ","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/92","",""
+New Portfolio > Update Model Modal,Maxerox,richwagner,Development,"zpl://screen?sid=5b4e15d8ee4a407243275462&pid=5b439da2de2a62566567ddbb","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/93","",""
+New Portfolio > Edit Benchmarks,cryptogramllc,richwagner,Development,"zpl://screen?sid=5b4e15d8f0c751670facecdf&pid=5b439da2de2a62566567ddbb","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/94","",""
+Reports > Page Nav and TOC,Maxerox,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/95","",""
+Reports > Introduction,Maxerox,richwagner,Development,"https://zpl.io/VkndRGK
+zpl://screen?sid=5b9ab3c5b8782c4c64d2d81f&pid=5b439da2de2a62566567ddbb","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/96","",""
+Reports > Snapshot,Maxerox,richwagner,Development,"https://zpl.io/VKleZPJ
+zpl://screen?sid=5b9ab3c6a8a8723630169b4a&pid=5b439da2de2a62566567ddbb","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/97","",""
+Reports > Performance Blueprint,Maxerox,richwagner,Development,"https://zpl.io/VDnLJBe
+zpl://screen?sid=5b9ab3c5a6d5aa02ee18f27c&pid=5b439da2de2a62566567ddbb","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/98","",""
+Reports > Investment Heatmap,Maxerox,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/99","",""
+Reports > Holdings,Maxerox,richwagner,Development,"- [ ] Tables and layouts
+- [ ] Top stocks
+- [ ] Overlap
+- [ ] Mstar style box coverage 
+
+https://zpl.io/bznrE6X
+zpl://screen?sid=5b9ab4596f6b77922bef9eb2&pid=5b439da2de2a62566567ddbb","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/100","",""
+Reports > Performance,cryptogramllc,richwagner,Development,"- [ ] Ratings & rankings table
+- [ ] Performance correlation
+- [ ] Returns of model
+- [ ] Risk measures
+
+https://zpl.io/VqwNjWG
+zpl://screen?sid=5b9ab3c7fa00404d95ecfb54&pid=5b439da2de2a62566567ddbb","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/101","",""
+Reports > Resources,cryptogramllc,richwagner,Development,"https://zpl.io/aw119Og
+zpl://screen?sid=5b4e1635f85a82dd7581c321&pid=5b439da2de2a62566567ddbb","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/102","",""
+Reports > Create New Report (FE),Maxerox,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/103","",""
+Reports > Customize branding modal,Maxerox,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/104","",""
+Account creation (BE),MirasHopsiup,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/105","",""
+Connect Portfolio Detail to APIs,Lexitrons,richwagner,Development,"Connect to both Backend and Morningstar APIs
+Use https://www.dropbox.com/s/ci8l2vpi5cn5lms/JHI_Portfolio-API-matrix-0.8.pdf?dl=0 for reference. ","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/106","",""
+Connect Dashboard to API,cryptogramllc,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/107","",""
+Connecting Portfolios to APIs,cryptogramllc,richwagner,Development,"Connect to Backend API and M* API. ","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/108","",""
+Connect Portfolio Compare to APIs,cryptogramllc,richwagner,Development,"Connect Portfolio Comparison view to M* API. ","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/109","",""
+Connect Create/Edit Portfolio to APIs,cryptogramllc,richwagner,Development,"Connect to Backend API and M* APIs","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/110","",""
+Connect Reports to APIs,Maxerox,richwagner,Development,"Connect to Backend API and M* APIs","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/111","",""
+Connect Account page to Backend API,cryptogramllc,richwagner,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/112","",""
+Complete Portfolio Comparison page,cryptogramllc,richwagner,Development,"Integrate various components into page. ","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/113","",""
+New Portfolio > Add Cash Modal,Lexitrons,richwagner,Development,"zpl://screen?sid=5bc4f449df29ce0aa9b01970&pid=5b439da2de2a62566567ddbb
+https://zpl.io/bz1NMq3
+","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/114","",""
+Portfolio share email implementation,mvanderhyde,bodek,Development,"It has to be agreed how portfolio share emails are sent. Are we going to use Marketo? Who will prepare email and pass the details?","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/115","",""
+API GET /api/v1/category,MirasHopsiup,MirasHopsiup,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/116","",""
+PDF Report Generation - deploy PDF Generation Service,xtrimsky,richwagner,Development,"Use similar tech as Factsheets (Headless chrome) ","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/117","",""
+Better handling of shared data,MirasHopsiup,MirasHopsiup,Development,"","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/118","",""
+Mstar XRay api issues ,Lexitrons,Lexitrons,Development,"I'm when adding funds and sending them to the xray API the breakdown for categories is always returning a fund as US Equity and is also returning the number of funds within a category and not he percentage breakdown of the portfolio. 
+
+This is the holdings data coming back from mstar:
+<img width="490" alt="screen shot 2019-02-28 at 12 00 52 pm" src="https://user-images.githubusercontent.com/8291013/53584045-bdd84300-3b50-11e9-88ae-f2f18d013720.png">
+
+
+for reference the call is to 
+
+>  https://api.morningstar.com/portfolioanalysis/v1/xray?langcult=en-US&access_token=1BySnTqqbsVIrzlKONv2mLS9NNHn&domain=http://localhost:4503
+
+and the data being sent to Mstar is 
+
+``` json
+{
+    "View": {
+        "Id": "XrayOverview"
+    },
+    "Config": {
+        "Id": "Default"
+    },
+    "RequestSettings": {
+        "OutputCurrency": "USD",
+        "AnalysisDateTimePeriod": "MonthEnd"
+    },
+    "Portfolios": [
+        {
+            "Name": "portfolio name 3",
+            "TotalValue": 9999.99,
+            "Currency": "USD",
+            "Holdings": [
+                {
+                    "SecurityId": "0P0000BBCI",
+                    "Type": "ST",
+                    "Weight": 20
+                },
+                {
+                    "SecurityId": "0P0000BMCL",
+                    "Type": "ST",
+                    "Weight": 30
+                },
+                {
+                    "SecurityId": "F00000W522",
+                    "Weight": 25
+                },
+                {
+                    "SecurityId": "FOUSA02UI2",
+                    "Weight": 25
+                }
+            ]
+        }
+    ],
+    "BenchMark": [
+        {
+            "Type": "Standard",
+            "Holdings": []
+        }
+    ]
+}
+
+```","See also https://github.com/JHDevOps/jhinv_pi/issues/18","@rodrale-jhancock  via Sri:
+
+please tell the team that they should be using the following API
+https://www.us-api.morningstar.com/portfolioanalysis/v1/xray?langcult=en-US
+for XRAY API.
+It looks like the team was using
+https://api.morningstar.com/portfolioanalysis/v1/xray?langcult=en-US and M* confirmed this is not the API we should be using.
+
+If you use the API https://www.us-api.morningstar.com/portfolioanalysis/v1/xray?langcult=en-US
+for XRAY API then it should give u the percentage break down as shown in the screen shot below","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/119"
+Portfolio API -- implement unit tests,MirasHopsiup,MirasHopsiup,Development,"","Implementation postponed for now. It will be continued in spare time.","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/120",""
+API DELETE /portfolio/:id,MirasHopsiup,bodek,Development,"Provide method to delete portfolio. Shared portfolios cannot be  deleted. Investor user cannot delete portfolio (as he has only portfolios shared with him) but it should work for all other user types (IBC, BC, FPFA, FA, SM).","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/121","",""
+Inroduce user types,bodek,bodek,Development,"Hierarchical structure of user types has to be used. User types to create:
+- Financial Advisor (FA)
+- Firm Partner Financial Advisor (FPFA)
+- Investor (I)
+- Business Consultant or Internal Business Consultant (BC/IBC)
+- Sales Manager (SM)
+-  Internal Marketing Admin (IMA)
+
+Investor user cannot create, edit and organize portfolios, he is only able to view portfolios shared with him by (read-only mode).
+SM is able to see portfolios created by BC and IBC in his territory.
+IBC and BC are able to see portfolios created by FA in their territory.
+IBC and BC can see portfolios of BC and IBC that share the same territory.
+IBC and BC can share portfolio with given FA.
+FA can remove access to portfolio shared with him but not delete portfolio itself.
+FA can edit and share portfolios shared with him by IBC/BC
+
+Questions:
+* What IMA can view/edit?
+* What Investor can?
+","omg","@stawnmi-jhancock Investor is just able to see portfolios shared with hum by FA.
+@vandemv-jhancock @wagnric-jhancock @carrale-jhancock do we have any further description of Internal Marketing Admin (IMA)? What is his role and is there ary any special operation this user can preform?","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/122"
+How user type and teritory is managed,bodek,bodek,Development,"There should be several user types:
+-  Financial Advisor (FA)
+ - Firm Partner Financial Advisor (FPFA)
+ - Investor (I)
+ - Business Consultant or Internal Business Consultant (BC/IBC)
+ - Sales Manager (SM)
+ - Internal Marketing Admin (IMA)
+
+Questions:
+* How user type is managed? 
+* Is is done by admin module of JHInwestments? Some of types might be created during login but not all of them.
+* How region is edited and is there any regions list?
+","@bogdagr-jhancock Here is some info from a recent JH email that provides some insight into roles in DataHub: 
+
+> I did further investigation with the team and figured out currently the API is sending null values for the territory information and this requires  a fix in the underlying Stored procedure and the API so that it will start returning the necessary values. Once the fix is put in place, I believe it should send the info for internal users as well.
+
+And: 
+
+> Matt Powers from the SalesForce team shared with us that the territory information is all being fed from SalesConnect into DataHub.  However what is not currently in DataHub is the sales management assignments.  Matt recommended we use territory codes and advisor email address to make the associations with BCs and IBCs as these codes will not change, however the people themselves might. 
+","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/123",""
+Connect Accounts to BE API's,cryptogramllc,Lexitrons,Development,"Connecting account pages and actions to BE services ","Issue migrated to https://github.com/JHDevOps/jhinv_pi/issues/124","",""
