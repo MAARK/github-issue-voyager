@@ -1,9 +1,8 @@
 /*jshint esversion: 6 */
 
+const IssueVoyager = require('./issueVoyager'); 
 const log = require('./log'); 
-const Octokat = require('octokat');
 const moment = require('moment');
-const bbPromise = require('bluebird');
 const fs = require('fs');
 const fsp = require('fs').promises;
 
@@ -13,34 +12,19 @@ const fsp = require('fs').promises;
  * importing into Jira.  
  */
 
-module.exports = class JiraIssueVoyager {
+class JiraIssueVoyager extends IssueVoyager {
 
     constructor(config) {
-        this.sourceClient = new Octokat({
-            token: config.sourceRepository.accessToken
-        });
-        this.sourceOwner = config.sourceRepository.repoOwner;
-        this.sourceName = config.sourceRepository.repoName;
-        this.method = config.options.method;
-        this.labels = config.options.labels;
-        this.issueNumbers = config.options.issueNumbers;
-        this.stickyUsers = config.options.stickyUsers;
-        this.closeIssueWhenComplete = config.options.closeIssueWhenComplete;
+        super(config); 
         this.priorityMappings = config.mappings.priorities; 
         this.typeMappings = config.mappings.types;
-        this.userMappings = config.mappings.users;
         this.maxCommentCount = 0; 
         this.exportIssueList = [];
         this.exportFolder = config.options.exportPath;
     }
     
     async execute() {
-        this.source = await this.sourceClient.repos(this.sourceOwner, this.sourceName).fetch();
-        if (this.method === 'issueNumber') {
-            await this._migrateIssuesByIssueNumber();
-        } else {
-            await this._migrateIssuesWithPagination();
-        }
+        await super.execute(); 
         if (this.exportIssueList.length > 0) {
             await this._createFolder(); 
             const filename = `${this.exportFolder}/${this.sourceName}.csv`;
@@ -52,56 +36,14 @@ module.exports = class JiraIssueVoyager {
         }
     }
 
-    async _migrateIssuesByIssueNumber() {
-        const issueNumbers = this.issueNumbers;
-        const issues = await Promise.all(this.issueNumbers.map(async (issueNumber) => {
-            return await this.source.issues(issueNumber).fetch()
-            .catch(function(error) {
-                log.err(`😢 Sorry, no issue found matching issue number: ${issueNumber.toString()}`);
-                return null;
-            }); 
-        }));
-
-        if (issues) {
-            return await this._migrateIssues(issues);
-        }
-        else {
-            return null; 
-        } 
-    }
-
-    async _migrateIssuesWithPagination() {
-        let page; 
-        if (this.labels.length > 0 && this.method === 'label') {
-            const labels = this.labels;        
-            page = await this.source.issues.fetch({labels, state: 'open', filter: 'all', direction: 'asc', per_page: 100});
-        }
-        else {
-            page = await this.source.issues.fetch({state: 'open', filter: 'all', direction: 'asc', per_page: 100});
-        }
-        let allIssues = page.items;  
-        while (typeof page.nextPage === 'function') {
-            page = await page.nextPage.fetch(); 
-            allIssues = allIssues.concat(page.items); 
-        }
-        const issues = allIssues.filter(i => !i.pullRequest);
-        if (issues.length === 0) {
-            log.warn(`😢 Sorry, no issues found`);
-            return null;
-        }
-        await this._migrateIssues(issues);
-    }
-
     async _migrateIssues(issues) {
-        log.i(`${issues.length} issue(s) will be migrated`);
         this.maxCommentCount = this._getMaxCommentCount(issues); 
         this._createCSVHeader(); 
-        await bbPromise.each(issues, issue => {
-            return this._migrateIssue(issue);
-        });
+        await super._migrateIssues(issues); 
     }
 
     async _migrateIssue(originalIssue) {
+        let test =  this._mapUser(originalIssue.assignees[0].login); 
         if (!originalIssue) {
             // Use case - invalid issue number is provided when migrating by issue number
             log.i(`A null issue was found. Ignoring.`); 
@@ -117,8 +59,7 @@ module.exports = class JiraIssueVoyager {
         try {
             const comments = await this.source.issues(originalIssue.number).comments.fetch({per_page: 100});
             comments.items.forEach(comment => {
-                //https://docs.oracle.com/javase/1.5.0/docs/api/java/text/SimpleDateFormat.html
-                // Using default 
+                //Using default: https://docs.oracle.com/javase/1.5.0/docs/api/java/text/SimpleDateFormat.html
                 const timestamp = moment(comment.createdAt).format('DD/MMM/YY h:mm a');
                 const username = (this.stickyUsers ? comment.user.login : this._mapUser(comment.user.login)); 
                 const body = this._safe(this._mapUsersInBody(comment.body));
@@ -136,38 +77,14 @@ module.exports = class JiraIssueVoyager {
             log.i(`🤘 Successfully exported issue from ${this.sourceOwner}/${this.sourceName} #${originalIssue.number}`);
             return true;
         } catch (e) {
-          log.err(`😱 Something went wrong while migrating issue #${originalIssue.number}!`);
-          log.err(JSON.stringify(e, null, 2));
+            log.err(`😱 Something went wrong while migrating issue #${originalIssue.number}: ${e.message}`);
         }
-    }
-
-    _mapUser(sourceUser, useUsername = true) {
-        let result = "";
-        // https://coderwall.com/p/kvzbpa/don-t-use-array-foreach-use-for-instead
-        for (var i = 0, len = this.userMappings.length; i < len; i++) {
-            let u = this.userMappings[i];
-            if (u.source === sourceUser) {
-                result = useUsername ? u.destination : u.destinationName;
-                break;
-            }
-        }
-        return result;
     }
 
     _replaceUser(sourceUser, body) {
         let srcUser = `@${sourceUser}`;
         let destUser = `@${this._mapUser(sourceUser, false)}`;
         return body.replace(new RegExp(srcUser, 'gi'), destUser);
-    }
-
-    _mapUsersInBody(body) {
-        let result = body;
-        if (!this.stickyUsers) {
-            this.userMappings.map(user => {
-                result = this._replaceUser(user.source, result);
-            });
-        }
-        return result;
     }
 
     _safe(body) {
@@ -254,3 +171,5 @@ module.exports = class JiraIssueVoyager {
       }
 
 }
+
+module.exports = JiraIssueVoyager
