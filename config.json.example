@@ -16,9 +16,24 @@
     "stickyUsers" : false, 
     "closeIssueWhenComplete" : false
   }, 
-  "userMappings" : [
-    {"source": "first-username", "destination" : "second-username"} 
-  ]
+  "mappings" : {
+    "priorities" : [
+      {"source": "prioritya", "destination": "Highest"},
+      {"source": "priority a", "destination": "Highest"},     
+      {"source": "priorityb", "destination": "High"},     
+      {"source": "priority b", "destination": "High"},     
+      {"source": "priorityc", "destination": "Low"},     
+      {"source": "priority c", "destination": "Low"}    
+    ], 
+    "types" : [
+      {"source": "design", "destination": "Design"},
+      {"source": "bug", "destination": "Bug"},
+      {"source": "task", "destination": "Development"}
+    ], 
+    "users: [
+      {"source": "first-username", "destination" : "second-username","destinationName":"John Doe"} 
+    ]
+  }
 }
 
 

@@ -1,25 +1,33 @@
 /*jshint esversion: 6 */
 
-require('colors');
 const getConfigJson = require('./configFile').getConfigJson;
-const IssueJiraVoyager = require('./issueJiraVoyager');
+const JiraIssueVoyager = require('./issueJiraVoyager');
+const GitHubIssueVoyager = require('./issueGitHubVoyager');
+const log = require('./log'); 
 
 module.exports = () => {
 
-    const configJson = getConfigJson();
+    const config = getConfigJson();
 
-    async function main() {
-        const voyager = new IssueJiraVoyager(configJson);
-        const result = await voyager.execute();
+    async function main() {        
+        let voyager;  
+        if (config.migrationType === 'github') {
+            voyager = new GitHubIssueVoyager(config);
+        } else if (config.migrationType === 'jira') {
+            voyager = new JiraIssueVoyager(config);
+        } 
+        return await voyager.execute();
     }
 
     // https://stackoverflow.com/questions/46515764/how-can-i-use-async-await-at-the-top-level
     (async () => {
         try {
-            await main();
-            console.log("🛳 Your GitHub Issue Voyage has been completed.");
-        } catch (e) {
-            console.error(e);
+            const result = await main();
+            if (result) {
+                log.success("🛳 You have reached your port of call. The issue voyage has successfully concluded.");
+            }
+        } catch (e) { 
+            log.err(e);
         }
     })();
 
