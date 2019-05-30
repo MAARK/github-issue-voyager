@@ -55,15 +55,22 @@ class JiraIssueVoyager extends IssueVoyager {
         const type = this._getTypeFromLabels(originalIssue.labels); 
         const priority = this._getPriorityFromLabels(originalIssue.labels); 
         const descr = this._safe(this._mapUsersInBody(originalIssue.body));
+
+        if (this.addSourceComment) {
+            await this.source.issues(originalIssue.number).comments.create({
+                body: `Issue migrated to Jira`
+            });    
+        }
+
         let exportIssue = `"${title}",${assignee},${reporter},${type},${priority},"${descr}"`;
         try {
             const comments = await this.source.issues(originalIssue.number).comments.fetch({per_page: 100});
             comments.items.forEach(comment => {
-                //Using default: https://docs.oracle.com/javase/1.5.0/docs/api/java/text/SimpleDateFormat.html
+                //Using default formatting: https://docs.oracle.com/javase/1.5.0/docs/api/java/text/SimpleDateFormat.html
                 const timestamp = moment(comment.createdAt).format('DD/MMM/YY h:mm a');
                 const username = (this.stickyUsers ? comment.user.login : this._mapUser(comment.user.login)); 
                 const body = this._safe(this._mapUsersInBody(comment.body));
-                //https://confluence.atlassian.com/adminjiraserver074/importing-data-from-csv-881683854.html
+                //Format structure: https://confluence.atlassian.com/adminjiraserver074/importing-data-from-csv-881683854.html
                 const cmt = `${timestamp}; ${username}; ${body}`; 
                 exportIssue = `${exportIssue},"${cmt}"`; 
             });

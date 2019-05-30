@@ -14,15 +14,14 @@
     "labels" : ["frontend"], 
     "issueNumbers" : [27, 28], 
     "stickyUsers" : false, 
-    "closeIssueWhenComplete" : false
+    "closeIssueWhenComplete" : false, 
+    "addSourceComment" : false, 
+    "exportPath" : "export"    
   }, 
   "mappings" : {
     "priorities" : [
-      {"source": "prioritya", "destination": "Highest"},
       {"source": "priority a", "destination": "Highest"},     
-      {"source": "priorityb", "destination": "High"},     
       {"source": "priority b", "destination": "High"},     
-      {"source": "priorityc", "destination": "Low"},     
       {"source": "priority c", "destination": "Low"}    
     ], 
     "types" : [
@@ -30,7 +29,7 @@
       {"source": "bug", "destination": "Bug"},
       {"source": "task", "destination": "Development"}
     ], 
-    "users: [
+    "users": [
       {"source": "first-username", "destination" : "second-username","destinationName":"John Doe"} 
     ]
   }

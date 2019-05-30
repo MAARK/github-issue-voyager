@@ -93,7 +93,7 @@ module.exports = {
             migrationType: t.String, 
             sourceRepository: Repo,
             destinationRepository: t.maybe(Repo), 
-            options: Options, 
+            options: t.maybe(Options), 
             mappings: t.maybe(Mappings)
         });    
 
