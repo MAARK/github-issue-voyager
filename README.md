@@ -1,7 +1,8 @@
 # GitHub Issue Voyager
 
+[![Build Status](https://travis-ci.org/Maark/maark-github-issue-voyager.svg)](https://travis-ci.org/Maark/maark-github-issue-voyager)
+[![Dependency Status](https://david-dm.org/MAARK/maark-github-issue-voyager.svg)](https://david-dm.org/MAARK/github-issue-voyager)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Dependency Status](https://david-dm.org/MAARK/github-issue-voyager.svg)](https://david-dm.org/MAARK/github-issue-voyager)
 
 ## Overview
 
