@@ -29,6 +29,7 @@
     "moment": "^2.24.0",
     "octokat": "^0.10.0",
     "tcomb-validation": "^3.4.1",
-    "yargs": "^13.2.2"
+    "yargs": "^13.2.2", 
+    "jshint" : "^2.10.2"
   }
 }
