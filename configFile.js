@@ -1,5 +1,5 @@
 const log = require('./log');  
-const argv = require('yargs').argv
+const argv = require('yargs').argv; 
 const readFileSync = require('fs').readFileSync; 
 const statSync = require('fs').statSync; 
 const t = require('tcomb-validation'); 
@@ -130,19 +130,17 @@ module.exports = {
             validateResult.errors.forEach(e => {
                 log.err(`Invalid value ${e.actual} supplied to ${e.path.join('/')}. Expected a ${t.getTypeName(e.expected)}`);
             });
-            process.exit(1)
+            process.exit(1);
         }
 
         const missingRequiredFields = checkRequiredFields(result); 
         if (missingRequiredFields) {
             log.err(`🚫 The configuation file is missing required fields. Please add necessary information and try again.`);
-            process.exit(1)
+            process.exit(1);
         }
 
         result = populateDefaults(result); 
 
         return result; 
     } 
-
-
-}
+};

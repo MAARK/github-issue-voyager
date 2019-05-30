@@ -1,5 +1,3 @@
-/*jshint esversion: 6 */
-
 const log = require('./log'); 
 const Octokat = require('octokat');
 const bbPromise = require('bluebird');
@@ -56,10 +54,9 @@ class IssueVoyager {
     }
 
     async _migrateIssuesByIssueNumber() {
-        const issueNumbers = this.issueNumbers;
         const issues = await Promise.all(this.issueNumbers.map(async (issueNumber) => {
             return await this.source.issues(issueNumber).fetch()
-            .catch(function(error) {
+            .catch(function() {
                 log.err(`😢 Sorry, no issue found matching issue number: ${issueNumber.toString()}`);
                 return null;
             }); 
@@ -104,4 +101,4 @@ class IssueVoyager {
     }
 }
 
-module.exports = IssueVoyager 
+module.exports = IssueVoyager; 

@@ -1,5 +1,3 @@
-/*jshint esversion: 6 */
-
 const IssueVoyager = require('./issueVoyager');
 const log = require('./log'); 
 const pick = require('lodash').pick;
@@ -82,7 +80,6 @@ class GitHubIssueVoyager extends IssueVoyager {
         let destUser = `@${this._mapUser(sourceUser)}`; 
         return body.replace(new RegExp(srcUser, 'gi'), destUser);
     }
-
 }    
 
-module.exports = GitHubIssueVoyager
+module.exports = GitHubIssueVoyager;

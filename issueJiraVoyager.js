@@ -1,5 +1,3 @@
-/*jshint esversion: 6 */
-
 const IssueVoyager = require('./issueVoyager'); 
 const log = require('./log'); 
 const moment = require('moment');
@@ -43,7 +41,6 @@ class JiraIssueVoyager extends IssueVoyager {
     }
 
     async _migrateIssue(originalIssue) {
-        let test =  this._mapUser(originalIssue.assignees[0].login); 
         if (!originalIssue) {
             // Use case - invalid issue number is provided when migrating by issue number
             log.i(`A null issue was found. Ignoring.`); 
@@ -179,4 +176,4 @@ class JiraIssueVoyager extends IssueVoyager {
 
 }
 
-module.exports = JiraIssueVoyager
+module.exports = JiraIssueVoyager; 

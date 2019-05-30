@@ -14,6 +14,5 @@ module.exports = {
     success: (s) => console.log(chalk.bgGreenBright.whiteBright(s)),  
 
     i: (s) => console.log(s)
-
-}
+};
 

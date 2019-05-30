@@ -6,7 +6,18 @@
   "bin": {
     "bon-voyage": "bin/voyage"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "jshint . --exclude node_modules"
+  },
+  "jshintConfig": {
+    "undef": true,
+    "unused": true,
+    "esversion": 9,
+    "node": true, 
+    "globals": {
+    "$": true
+    }
+  },
   "devDependencies": {},
   "dependencies": {
     "bluebird": "^3.5.3",

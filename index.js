@@ -1,4 +1,3 @@
-/*jshint esversion: 6 */
 
 const getConfigJson = require('./configFile').getConfigJson;
 const JiraIssueVoyager = require('./issueJiraVoyager');
@@ -31,4 +30,4 @@ module.exports = () => {
         }
     })();
 
-}
+}; 
