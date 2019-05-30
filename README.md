@@ -2,7 +2,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-
 ## Overview
 
 Fully configuration-based CLI tool to migrate issues across GitHub repositories or to export to Jira.
