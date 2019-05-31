@@ -19,7 +19,6 @@ class GitHubIssueVoyager extends IssueVoyager {
         });
         this.destinationOwner = config.destinationRepository.repoOwner; 
         this.destinationName = config.destinationRepository.repoName; 
-        this.addSourceComment = config.options.addSourceComment; 
     }
 
     async execute() {

@@ -19,6 +19,7 @@ class IssueVoyager {
         this.issueNumbers = config.options.issueNumbers;
         this.stickyUsers = config.options.stickyUsers;
         this.closeIssueWhenComplete = config.options.closeIssueWhenComplete;
+        this.addSourceComment = config.options.addSourceComment; 
         this.userMappings = config.mappings.users;
     }
 
