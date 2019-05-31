@@ -18,7 +18,6 @@ module.exports = () => {
         return await voyager.execute();
     }
 
-    // https://stackoverflow.com/questions/46515764/how-can-i-use-async-await-at-the-top-level
     (async () => {
         try {
             const result = await main();

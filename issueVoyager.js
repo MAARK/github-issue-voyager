@@ -79,7 +79,6 @@ class IssueVoyager {
 
     _mapUser(sourceUser, useUsername = true) {
         let result = "";
-        // Why for loop? https://coderwall.com/p/kvzbpa/don-t-use-array-foreach-use-for-instead
         for (var i = 0, len = this.userMappings.length; i < len; i++) {
             let u = this.userMappings[i];
             if (u.source === sourceUser) {
