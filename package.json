@@ -4,7 +4,7 @@
   "license": "MIT",
   "preferGlobal": true,
   "bin": {
-    "bon-voyage": "bin/voyage"
+    "github-issue-voyager": "bin/voyage"
   },
   "scripts": {
     "test": "jshint . --exclude node_modules"
