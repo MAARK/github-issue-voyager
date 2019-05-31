@@ -1,7 +1,7 @@
 # GitHub Issue Voyager
 
-[![Build Status](https://travis-ci.org/Maark/maark-github-issue-voyager.svg)](https://travis-ci.org/Maark/maark-github-issue-voyager)
-[![Dependency Status](https://david-dm.org/MAARK/maark-github-issue-voyager.svg)](https://david-dm.org/MAARK/github-issue-voyager)
+[![Build Status](https://travis-ci.org/Maark/github-issue-voyager.svg)](https://travis-ci.org/Maark/github-issue-voyager)
+[![Dependency Status](https://david-dm.org/MAARK/github-issue-voyager.svg)](https://david-dm.org/MAARK/github-issue-voyager)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
@@ -42,6 +42,7 @@ The configuration file is a JSON file in the following format:
 
 ```json
 {
+  "migrationType": "github",
   "sourceRepository": {
     "repoOwner": "MyFirstOwner",
     "repoName": "MyFirstRepoName",
