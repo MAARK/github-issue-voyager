@@ -2,6 +2,16 @@
   "name": "github-issue-voyager",
   "version": "0.7.1",
   "license": "MIT",
+  "author" : "Rich Wagner",
+  "description": "Fully configuration-based CLI tool to migrate issues across GitHub repositories or to export to Jira.",
+  "keywords": [
+    "github", 
+    "jira", 
+    "issue", 
+    "migration", 
+    "cli"
+  ],
+  "main": "index.js",
   "preferGlobal": true,
   "bin": {
     "github-issue-voyager": "bin/voyage"
@@ -31,5 +41,15 @@
     "tcomb-validation": "^3.4.1",
     "yargs": "^13.2.2",
     "jshint": "^2.10.2"
+  }, 
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MAARK/github-issue-voyager.git"
+  },  
+  "bugs": {
+    "url": "https://github.com/MAARK/github-issue-voyager/issues"
+  }, 
+  "homepage": {
+    "url": "https://github.com/MAARK/github-issue-voyager"
   }
 }
