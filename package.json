@@ -1,6 +1,6 @@
 {
   "name": "@maarkllc/github-issue-voyager",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "license": "MIT",
   "author": "Rich Wagner",
   "description": "Fully configuration-based CLI tool to migrate issues across GitHub repositories or to export to Jira.",
