@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Maark/github-issue-voyager.svg)](https://travis-ci.org/Maark/github-issue-voyager)
 [![Dependency Status](https://david-dm.org/MAARK/github-issue-voyager.svg)](https://david-dm.org/MAARK/github-issue-voyager)
-[![npm version](https://badge.fury.io/js/github-issue-voyager.svg)](https://badge.fury.io/js/github-issue-voyager)
+[![npm version](https://badge.fury.io/js/https%3A%2Fwww.npmjs.com%2Fpackage%2F%40maarkllc%2Fgithub-issue-voyager.svg)](https://badge.fury.io/js/https%3A%2Fwww.npmjs.com%2Fpackage%2F%40maarkllc%2Fgithub-issue-voyager)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
