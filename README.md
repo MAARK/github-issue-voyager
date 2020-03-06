@@ -110,7 +110,7 @@ Descriptions of each property are provided below:
 
 ## MIT License
 
-Copyright (c) 2019 Maark
+Copyright (c) 2020 Maark
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
